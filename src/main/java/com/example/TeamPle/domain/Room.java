@@ -1,9 +1,8 @@
-package com.example.TeamPle;
+package com.example.TeamPle.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import com.example.TeamPle.User;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;

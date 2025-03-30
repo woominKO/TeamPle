@@ -1,4 +1,4 @@
-package com.example.TeamPle;
+package com.example.TeamPle.util;
 
 import java.util.Random;
 

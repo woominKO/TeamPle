@@ -1,4 +1,4 @@
-package com.example.TeamPle;
+package com.example.TeamPle.dto;
 
 import lombok.Getter;
 import java.util.UUID;

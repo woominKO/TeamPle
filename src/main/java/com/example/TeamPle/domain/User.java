@@ -1,4 +1,4 @@
-package com.example.TeamPle;
+package com.example.TeamPle.domain;
 
 import jakarta.persistence.*;
 import java.util.Set;
