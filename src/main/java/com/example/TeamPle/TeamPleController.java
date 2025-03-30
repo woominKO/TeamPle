@@ -5,11 +5,11 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/rooms")
-public class RoomController {
+public class TeamPleController {
 
     private final RoomService roomService;
 
-    public RoomController(RoomService roomService) {
+    public TeamPleController(RoomService roomService) {
         this.roomService = roomService;
     }
 
