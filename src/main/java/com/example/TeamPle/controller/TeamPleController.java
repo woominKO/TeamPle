@@ -2,8 +2,11 @@ package com.example.TeamPle.controller;
 
 import com.example.TeamPle.dto.JoinResponseDto;
 import com.example.TeamPle.domain.Room;
+import com.example.TeamPle.dto.RoomResponseDto;
 import com.example.TeamPle.service.RoomService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -26,6 +29,11 @@ public class TeamPleController {
     @PostMapping("/{roomId}/join")
     public JoinResponseDto joinRoom(@PathVariable UUID roomId) {
         return roomService.joinRoom(roomId);
+    }
+
+    @GetMapping
+    public List<RoomResponseDto> getAllRooms() {
+        return roomService.getAllRooms();
     }
 }
 

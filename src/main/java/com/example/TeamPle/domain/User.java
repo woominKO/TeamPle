@@ -1,11 +1,17 @@
 package com.example.TeamPle.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Set;
 
+@Setter
+@Getter
 @Entity
 public class User {
 
+    // getter/setter (Lombok 쓰지 않을 경우 수동 생성)
     @Id
     @GeneratedValue
     private Long id;
@@ -19,28 +25,4 @@ public class User {
     public User() {
     }
 
-    // getter/setter (Lombok 쓰지 않을 경우 수동 생성)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public Set<Room> getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(Set<Room> rooms) {
-        this.rooms = rooms;
-    }
 }

@@ -1,6 +1,7 @@
 package com.example.TeamPle.service;
 
 import com.example.TeamPle.dto.JoinResponseDto;
+import com.example.TeamPle.dto.RoomResponseDto;
 import com.example.TeamPle.util.NicknameGenerator;
 import com.example.TeamPle.repository.UserRepository;
 import com.example.TeamPle.domain.User;
@@ -9,6 +10,7 @@ import com.example.TeamPle.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -44,5 +46,11 @@ public class RoomService {
 
         // 5. 응답 DTO 생성
         return new JoinResponseDto(savedUser.getId(), savedUser.getNickname(), room.getRoomId());
+    }
+
+    public List<RoomResponseDto> getAllRooms() {
+        return roomRepository.findAll().stream()
+                .map(RoomResponseDto::new)
+                .toList();
     }
 }
